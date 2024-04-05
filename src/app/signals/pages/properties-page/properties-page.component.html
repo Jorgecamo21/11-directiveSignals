@@ -1,0 +1,18 @@
+<h1>Mutaciones</h1>
+<hr>
+
+<div class="row">
+  <div class="col-6">
+
+    <input type="text" class="form-control mb-3" #txtEmail (input)="onFieldUpdated('email',txtEmail.value)" [value]="data().email">
+
+    <input type="text" class="form-control mb-3" #txtFirstName (input)="onFieldUpdated('first_name',txtFirstName.value)" [value]="data().first_name">
+
+    <input type="text" class="form-control mb-3" #txtLastName (input)="onFieldUpdated('last_name',txtLastName.value)" [value]="data().last_name">
+
+  </div>
+
+  <div class="col-6">
+    <pre>{{data() | json}}</pre>
+  </div>
+</div>
